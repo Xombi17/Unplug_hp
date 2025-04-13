@@ -55,20 +55,26 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className={`flex items-center ${getNavAnimation(0)}`}>
-          <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
+          <a href="/" className="flex items-center">
+            <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
+         
+          </a>
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 items-center">
-          {['about', 'features', 'mentors', 'schedule', 'newsletter'].map((item, index) => (
-            <a 
-              key={item}
-              href={`#${item}`} 
-              className={`font-magical text-white hover:text-sky-400 transition-colors ${getNavAnimation(index + 1)}`}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center justify-between flex-1">
+          <div className="flex-grow-0"></div> {/* Empty space */}
+          <div className="flex space-x-8 items-center mx-auto">
+            {['about', 'features', 'mentors', 'schedule', 'newsletter'].map((item, index) => (
+              <a 
+                key={item}
+                href={`#${item}`} 
+                className={`font-magical text-white hover:text-sky-400 transition-colors ${getNavAnimation(index + 1)}`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            ))}
+          </div>
           <Button className={`magical-button bg-gradient-to-r from-sky-600 to-sky-400 text-white ${getNavAnimation(6)}`}>
             Apply Now
           </Button>
