@@ -41,7 +41,8 @@ const Hero = () => {
           </div>
           
           <h1 className="font-harry-potter text-6xl md:text-8xl font-bold mb-8 leading-tight text-white magical-text-shadow">
-            <span className="text-amber-400">Hogwarts</span> Startup Launchpad
+            <span className="text-amber-400">Unplug</span><br />
+            Hogwarts Edition
           </h1>
           
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white/90 font-serif">

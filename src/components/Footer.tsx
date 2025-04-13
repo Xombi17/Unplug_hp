@@ -59,7 +59,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white/60">
-            © 2025 Hogwarts Startup Launchpad. All rights reserved. No muggles allowed.
+            © 2025 Unplug Startup Launchpad. All rights reserved. No muggles allowed.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-white/60 hover:text-amber-400 transition-colors">Privacy Policy</a>

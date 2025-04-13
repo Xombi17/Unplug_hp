@@ -31,8 +31,7 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Sparkles className="w-6 h-6 text-amber-400 mr-2" />
-          <span className="font-magical text-2xl font-bold text-white">Hogwarts<span className="text-amber-400">Launch</span></span>
+          <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
         </div>
         
         {/* Desktop Menu */}
