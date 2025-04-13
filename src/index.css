@@ -83,6 +83,8 @@
 
   body {
     @apply bg-background text-foreground;
+    perspective: 1000px;
+    transform-style: preserve-3d;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -147,6 +149,110 @@
   .magical-text-shadow {
     text-shadow: 0 0 10px rgba(255, 183, 77, 0.7), 0 0 20px rgba(255, 183, 77, 0.4);
   }
+  
+  /* Animation classes for site load */
+  .animate-slide-down {
+    animation: slideDown 1s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideLeft 1s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 1s ease-out forwards;
+  }
+  
+  .animate-scale-up {
+    animation: scaleUp 1s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Scroll animation classes */
+  [data-scroll] {
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  [data-scroll].animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  [data-scroll].animate-out {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  
+  /* Parallax classes */
+  .parallax-container {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .parallax-layer {
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-depth-1 {
+    transform: translateZ(-100px) scale(1.1);
+  }
+  
+  .parallax-depth-2 {
+    transform: translateZ(-200px) scale(1.2);
+  }
+  
+  .parallax-depth-3 {
+    transform: translateZ(-300px) scale(1.3);
+  }
+}
+
+/* Animation delay utilities */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
 }
 
 /* Additional Harry Potter themed elements */
@@ -175,13 +281,50 @@
   animation: float 8s ease-in-out infinite, spin 15s linear infinite;
 }
 
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 183, 77, 0.7); }
+  50% { box-shadow: 0 0 25px rgba(255, 183, 77, 0.9); }
 }
 
 @layer utilities {

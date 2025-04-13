@@ -1,280 +1,146 @@
 import React, { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Clock, Stars, BookOpen, GraduationCap, Scroll, ScrollText, Feather, CalendarDays, Coffee, Utensils, Music, Moon, MapPin, Mountain, Coins, Wand2, Hotel, Check, ChevronRight, Smile } from "lucide-react";
+import { Sparkles, Clock, Stars, BookOpen, GraduationCap, Scroll, ScrollText, Feather, CalendarDays, Coffee, Utensils, Music, Moon, MapPin, Mountain, Coins, Wand2, Hotel, Check, ChevronRight, Smile, Calendar, Users, Heart, Award, ChefHat, PartyPopper } from "lucide-react";
 
 const Schedule = () => {
   const [activeDay, setActiveDay] = useState(1);
 
   return (
     <>
-    <section id="schedule" className="py-16 md:py-24 relative">
-      {/* Magical background effects */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-sky-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-sky-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
-        
-        {/* Floating particles */}
-        <div className="absolute top-1/4 right-[10%] w-2 h-2 bg-sky-400/40 rounded-full animate-float" style={{ animationDelay: "0s" }}></div>
-        <div className="absolute top-2/3 left-[20%] w-3 h-3 bg-sky-400/30 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 right-[30%] w-2 h-2 bg-sky-400/20 rounded-full animate-float" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-3/4 right-[15%] w-1 h-1 bg-sky-400/40 rounded-full animate-float" style={{ animationDelay: "1.5s" }}></div>
-        <div className="absolute top-1/3 left-[15%] w-2 h-2 bg-sky-400/30 rounded-full animate-float" style={{ animationDelay: "0.5s" }}></div>
-        
-        {/* Magical symbols */}
-        <div className="absolute top-20 right-[20%] opacity-10">
-          <Feather className="h-12 w-12 text-sky-400" style={{ transform: "rotate(15deg)" }} />
-        </div>
-        <div className="absolute bottom-20 left-[15%] opacity-10">
-          <Mountain className="h-16 w-16 text-sky-400" style={{ transform: "rotate(-10deg)" }} />
-        </div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="flex justify-center">
-            <CalendarDays className="h-14 w-14 text-sky-400 mx-auto mb-4" />
+    <section id="schedule" className="py-24 bg-gradient-to-b from-black to-sky-950/30 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div data-gsap-anim="fade-down" data-gsap-delay="0.1" className="inline-block mb-4">
+            <span className="text-xs uppercase tracking-wider bg-sky-700/80 text-white px-6 py-2 rounded-full 
+              font-harry-potter border border-sky-300/50 shadow-[0_0_15px_rgba(14,165,233,0.5)]">
+              Magical Timetable
+            </span>
           </div>
-          <Badge variant="outline" className="mb-4 font-harry-potter px-6 py-2 bg-sky-900/40 text-sky-100 border-sky-400/40 shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-            Magical Timetable
-          </Badge>
-          <h2 className="font-harry-potter text-4xl md:text-6xl font-bold mb-6 text-sky-300 shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-            Event Schedule
+          
+          <h2 data-gsap-anim="fade-up" data-gsap-delay="0.2" className="text-5xl md:text-6xl font-bold mb-6 font-harry-potter magical-text-shadow">
+            <span className="text-sky-400">Event</span> Schedule
           </h2>
-          <p className="text-sky-100 text-lg md:text-xl max-w-3xl mx-auto mb-8">
-            Your detailed guide to our three-day magical retreat at Mahabaleshwar Mountains
+          
+          <div data-gsap-anim="fade-up" data-gsap-delay="0.3" className="h-1 w-24 bg-gradient-to-r from-sky-500 to-sky-300 mb-10 mx-auto"></div>
+          
+          <p data-gsap-anim="fade-up" data-gsap-delay="0.4" className="max-w-3xl mx-auto text-lg text-white/80 mb-12">
+            A carefully crafted schedule for your three-day magical retreat
           </p>
         </div>
         
-        {/* Event details card */}
-        <div className="max-w-5xl mx-auto mb-12 bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-6 shadow-[0_0_25px_rgba(14,165,233,0.2)]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center">
-              <div className="bg-sky-900/50 rounded-full p-3 mr-4">
-                <CalendarDays className="h-8 w-8 text-sky-400" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-harry-potter text-sky-300">April 18-20, 2026</h3>
-                <p className="text-sky-300/70">Three-Day Magical Retreat</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center">
-              <div className="bg-sky-900/50 rounded-full p-3 mr-4">
-                <MapPin className="h-8 w-8 text-sky-400" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-harry-potter text-sky-300">Mahabaleshwar, Maharashtra</h3>
-                <p className="text-sky-300/70">Mountainside Magical Sanctuary</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Day selector tabs */}
-        <div className="max-w-5xl mx-auto mb-10">
-          <div className="flex justify-center">
-            <div className="inline-flex bg-black/60 backdrop-blur-md rounded-full p-1 border border-sky-700/50 shadow-[0_0_15px_rgba(14,165,233,0.15)]">
-              {[1, 2, 3].map((day) => (
-                <button 
-                  key={day}
-                  onClick={() => setActiveDay(day)}
-                  className={`font-harry-potter px-6 py-3 rounded-full transition-all duration-300 ${
-                    activeDay === day 
-                      ? 'bg-gradient-to-r from-sky-700 to-sky-600 text-white shadow-md' 
-                      : 'text-sky-400 hover:text-sky-300'
-                  }`}
-                >
-                  DAY {day}
-                </button>
-              ))}
-            </div>
+        {/* Day selector */}
+        <div data-gsap-anim="fade-up" data-gsap-delay="0.5" className="flex justify-center mb-12">
+          <div className="inline-flex rounded-md shadow-md overflow-hidden border border-sky-700/50">
+            {[1, 2, 3].map(day => (
+              <button
+                key={day}
+                onClick={() => setActiveDay(day)}
+                className={`px-8 py-4 font-harry-potter text-lg transition-all ${
+                  activeDay === day 
+                    ? 'bg-sky-700 text-white' 
+                    : 'bg-sky-900/20 text-sky-300 hover:bg-sky-800/30'
+                }`}
+              >
+                Day {day}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Schedule content */}
-        <div className="max-w-5xl mx-auto">
-          {/* Day header */}
-          <div className="bg-gradient-to-r from-sky-900/80 via-sky-800/80 to-sky-900/80 rounded-t-xl px-6 py-4 border border-sky-700/50">
-            <h3 className="font-harry-potter text-2xl text-sky-300 flex items-center">
-              {activeDay === 1 && (
-                <>
-                  <Sparkles className="w-6 h-6 mr-3 text-sky-400" />
-                  Day One: The Awakening
-                </>
-              )}
-              {activeDay === 2 && (
-                <>
-                  <Stars className="w-6 h-6 mr-3 text-sky-400" />
-                  Day Two: The Transformation
-                </>
-              )}
-              {activeDay === 3 && (
-                <>
-                  <Scroll className="w-6 h-6 mr-3 text-sky-400" />
-                  Day Three: The Ascension
-                </>
-              )}
-            </h3>
-          </div>
-          
-          {/* Day content */}
-          <div className="bg-black/40 backdrop-blur-md rounded-b-xl border-x border-b border-sky-700/30 overflow-hidden shadow-[0_0_25px_rgba(14,165,233,0.15)]">
-            {/* Day One Content */}
-            {activeDay === 1 && (
-              <div className="grid gap-6 p-6 md:grid-cols-2">
-                <EventCard 
-                  time="4:00 PM"
-                  title="Arrival and Check-in"
-                  description="Welcome to our Magical Beachside Sanctuary. Collect your welcome kit and settle into your accommodations."
-                  icon={<CalendarDays className="w-5 h-5 text-sky-400" />}
-                />
+        {/* Schedule for Day 1 */}
+        <div data-gsap-stagger="0.1" data-gsap-anim="fade-up" className={activeDay === 1 ? 'block' : 'hidden'}>
+          {day1Schedule.map((event, index) => (
+            <div 
+              key={index}
+              data-gsap-stagger-item
+              className="mb-8 bg-gradient-to-r from-sky-900/10 to-transparent p-8 rounded-lg border-l-4 border-sky-500 hover:shadow-[0_0_25px_rgba(14,165,233,0.2)] transition-all"
+            >
+              <div className="flex flex-wrap items-start">
+                <div className="w-full md:w-1/4 mb-4 md:mb-0">
+                  <div className="flex items-center mb-2">
+                    <Clock className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.time}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.location}</span>
+                  </div>
+                </div>
                 
-                <EventCard 
-                  time="5:00-6:30 PM"
-                  title="Welcome Drink + Snacks"
-                  description="Enjoy magical refreshments and meet your fellow wizards and witches in an informal setting."
-                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="7:00-8:00 PM"
-                  title="Unplug Kickoff"
-                  description="Opening ceremony and introduction to the magical entrepreneurship weekend ahead."
-                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="8:30-9:30 PM"
-                  title="Dinner & BBQ"
-                  description="Feast on a delicious dinner with magical cuisine and beachside barbecue."
-                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="9:30-11:00 PM"
-                  title="Ice-breaker & Pitch by Campfire"
-                  description="Connect with fellow entrepreneurs around the magical campfire and share your startup ideas."
-                  icon={<Scroll className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="11:00 PM+"
-                  title="Build or Sleep"
-                  description="Continue developing your ideas with newfound collaborators or retire to your magical chambers."
-                  icon={<Moon className="w-5 h-5 text-sky-400" />}
-                />
+                <div className="w-full md:w-3/4 md:pl-6">
+                  <div className="flex items-center mb-2">
+                    {React.createElement(event.icon, { className: "h-6 w-6 text-sky-400 mr-3" })}
+                    <h3 className="text-2xl font-harry-potter text-white">{event.title}</h3>
+                  </div>
+                  <p className="text-white/70">{event.description}</p>
+                </div>
               </div>
-            )}
-            
-            {/* Day Two Content */}
-            {activeDay === 2 && (
-              <div className="grid gap-6 p-6 md:grid-cols-2">
-                <EventCard 
-                  time="7:30-8:30 AM"
-                  title="Breakfast"
-                  description="Start your day with a hearty magical breakfast to fuel your creativity."
-                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="9:00-10:30 AM"
-                  title="Workshop: Spellbinding Pitches"
-                  description="Learn the art of crafting compelling startup pitches that captivate investors."
-                  icon={<GraduationCap className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="11:00-12:30 PM"
-                  title="Expert Panel: Magical Innovation"
-                  description="Industry leaders share insights on disruptive innovation and market opportunities."
-                  icon={<BookOpen className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="1:00-2:00 PM"
-                  title="Lunch Break"
-                  description="Networking lunch with fellow entrepreneurs and mentors."
-                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="2:30-5:30 PM"
-                  title="Mentor Matching & Working Session"
-                  description="One-on-one sessions with industry experts matched to your specific startup needs."
-                  icon={<Stars className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="6:00-7:30 PM"
-                  title="Sunset Networking"
-                  description="Mountain trails exploration and networking with light refreshments."
-                  icon={<Music className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="8:00-9:30 PM"
-                  title="Magical Banquet"
-                  description="An evening of celebration, featuring special entertainment and networking opportunities."
-                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
-                />
-              </div>
-            )}
-            
-            {/* Day Three Content */}
-            {activeDay === 3 && (
-              <div className="grid gap-6 p-6 md:grid-cols-2">
-                <EventCard 
-                  time="7:30-8:30 AM"
-                  title="Final Breakfast"
-                  description="Energize for your final day with a nutritious breakfast."
-                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="9:00-10:00 AM"
-                  title="Pitch Preparation"
-                  description="Final polishing of your startup pitches with mentor guidance."
-                  icon={<Scroll className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="10:30-12:30 PM"
-                  title="Startup Showcase"
-                  description="Present your refined business ideas to a panel of investors and industry experts."
-                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="1:00-2:00 PM"
-                  title="Celebratory Lunch"
-                  description="Final networking lunch with entrepreneurs, mentors and investors."
-                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="2:30-3:30 PM"
-                  title="Awards & Closing Ceremony"
-                  description="Recognition of outstanding projects, startup funding announcements, and closing remarks."
-                  icon={<GraduationCap className="w-5 h-5 text-sky-400" />}
-                />
-                
-                <EventCard 
-                  time="4:00 PM"
-                  title="Departure"
-                  description="Farewell to our magical retreat. Transportation arrangements back to the city."
-                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
-                />
-              </div>
-            )}
-          </div>
-          
-          {/* Magical signature */}
-          <div className="relative h-12 mt-6 flex justify-center">
-            <div className="absolute w-40 h-1 bg-gradient-to-r from-transparent via-sky-600/50 to-transparent"></div>
-            <div className="absolute -top-6 text-sky-400/30 font-harry-potter text-sm">
-              - The Hogwarts Organizers
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Schedule for Day 2 */}
+        <div data-gsap-stagger="0.1" data-gsap-anim="fade-up" className={activeDay === 2 ? 'block' : 'hidden'}>
+          {day2Schedule.map((event, index) => (
+            <div 
+              key={index}
+              data-gsap-stagger-item
+              className="mb-8 bg-gradient-to-r from-sky-900/10 to-transparent p-8 rounded-lg border-l-4 border-sky-500 hover:shadow-[0_0_25px_rgba(14,165,233,0.2)] transition-all"
+            >
+              <div className="flex flex-wrap items-start">
+                <div className="w-full md:w-1/4 mb-4 md:mb-0">
+                  <div className="flex items-center mb-2">
+                    <Clock className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.time}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.location}</span>
+                  </div>
+                </div>
+                
+                <div className="w-full md:w-3/4 md:pl-6">
+                  <div className="flex items-center mb-2">
+                    {React.createElement(event.icon, { className: "h-6 w-6 text-sky-400 mr-3" })}
+                    <h3 className="text-2xl font-harry-potter text-white">{event.title}</h3>
+                  </div>
+                  <p className="text-white/70">{event.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Schedule for Day 3 */}
+        <div data-gsap-stagger="0.1" data-gsap-anim="fade-up" className={activeDay === 3 ? 'block' : 'hidden'}>
+          {day3Schedule.map((event, index) => (
+            <div 
+              key={index}
+              data-gsap-stagger-item
+              className="mb-8 bg-gradient-to-r from-sky-900/10 to-transparent p-8 rounded-lg border-l-4 border-sky-500 hover:shadow-[0_0_25px_rgba(14,165,233,0.2)] transition-all"
+            >
+              <div className="flex flex-wrap items-start">
+                <div className="w-full md:w-1/4 mb-4 md:mb-0">
+                  <div className="flex items-center mb-2">
+                    <Clock className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.time}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-sky-400 mr-2" />
+                    <span className="text-sky-300 font-harry-potter">{event.location}</span>
+                  </div>
+                </div>
+                
+                <div className="w-full md:w-3/4 md:pl-6">
+                  <div className="flex items-center mb-2">
+                    {React.createElement(event.icon, { className: "h-6 w-6 text-sky-400 mr-3" })}
+                    <h3 className="text-2xl font-harry-potter text-white">{event.title}</h3>
+                  </div>
+                  <p className="text-white/70">{event.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -498,28 +364,134 @@ const Schedule = () => {
   );
 };
 
-// EventCard component
-const EventCard = ({ time, title, description, icon }) => {
-  return (
-    <div className="bg-sky-900/20 backdrop-blur-md border border-sky-700/30 rounded-lg p-4 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(14,165,233,0.2)] hover:border-sky-400/50">
-      <div className="flex items-center mb-3">
-        <div className="flex items-center mr-4">
-          <Clock className="text-sky-500 w-5 h-5 mr-2" />
-          <span className="text-sky-300 font-harry-potter">{time}</span>
-        </div>
-      </div>
-      <div className="flex items-center mb-2">
-        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-          {icon}
-        </div>
-        <h4 className="font-harry-potter text-xl text-sky-300">{title}</h4>
-      </div>
-      <p className="text-sky-100/90 pl-[52px]">
-        {description}
-      </p>
-    </div>
-  );
-};
+// Event schedules
+const day1Schedule = [
+  {
+    time: "12:00 PM - 2:00 PM",
+    location: "Great Hall Entrance",
+    icon: Calendar,
+    title: "Arrival and Check-in",
+    description: "Begin your magical journey with a warm welcome. Collect your room keys, welcome pack, and conference materials."
+  },
+  {
+    time: "2:00 PM - 3:30 PM",
+    location: "Courtyard",
+    icon: Coffee,
+    title: "Welcome Drink + Snacks",
+    description: "Connect with fellow attendees over refreshments in our enchanted courtyard. Light beverages and magical treats will be served."
+  },
+  {
+    time: "4:00 PM - 5:30 PM",
+    location: "Great Hall",
+    icon: Sparkles,
+    title: "Opening Ceremony: The Sorting",
+    description: "Official kickoff with welcoming speeches, an overview of the retreat, and sorting participants into innovation houses for team activities."
+  },
+  {
+    time: "6:00 PM - 7:30 PM",
+    location: "Dining Hall",
+    icon: Utensils,
+    title: "Dinner & BBQ",
+    description: "Enjoy a feast worthy of Hogwarts with a barbecue dinner under the stars. Special dietary requirements accommodated."
+  },
+  {
+    time: "8:00 PM - 10:00 PM",
+    location: "Astronomy Tower",
+    icon: Music,
+    title: "Networking Night: Wizard's Mixer",
+    description: "Break the ice with fellow entrepreneurs through fun games and activities. Build connections that will last throughout the retreat and beyond."
+  }
+];
+
+const day2Schedule = [
+  {
+    time: "7:30 AM - 9:00 AM",
+    location: "Dining Hall",
+    icon: Coffee,
+    title: "Breakfast",
+    description: "Start your day with a hearty breakfast buffet featuring both magic-inspired and traditional morning options."
+  },
+  {
+    time: "9:30 AM - 11:00 AM",
+    location: "Defense Against Dark Arts Room",
+    icon: BookOpen,
+    title: "Keynote: Business Defense Strategies",
+    description: "Learn crucial entrepreneurial defense tactics from our master speaker who has successfully navigated startup challenges."
+  },
+  {
+    time: "11:30 AM - 1:00 PM",
+    location: "Different Classrooms",
+    icon: Users,
+    title: "Breakout Sessions (Track 1)",
+    description: "Choose from specialized workshops on funding, marketing, product development, or team building."
+  },
+  {
+    time: "1:00 PM - 2:30 PM",
+    location: "Great Hall",
+    icon: Utensils,
+    title: "Themed Lunch: House Competition",
+    description: "Enjoy lunch while participating in a friendly competition between the innovation houses formed during sorting."
+  },
+  {
+    time: "3:00 PM - 4:30 PM",
+    location: "Different Classrooms",
+    icon: Users,
+    title: "Breakout Sessions (Track 2)",
+    description: "Second round of specialized workshops with new topics and skilled facilitators."
+  },
+  {
+    time: "5:00 PM - 6:30 PM",
+    location: "Potions Laboratory",
+    icon: Heart,
+    title: "Mentorship Matchmaking",
+    description: "Connect with mentors in your field for one-on-one advice sessions. Pre-scheduling recommended."
+  },
+  {
+    time: "7:00 PM - 9:00 PM",
+    location: "Great Hall",
+    icon: ChefHat,
+    title: "Gala Dinner: Magical Feast",
+    description: "Formal dinner with entertainment and surprise magical performances. Dress code: Smart casual with a touch of magic."
+  }
+];
+
+const day3Schedule = [
+  {
+    time: "8:00 AM - 9:30 AM",
+    location: "Dining Hall",
+    icon: Coffee,
+    title: "Breakfast",
+    description: "Final day breakfast with overnight attendees. Connect over coffee before the day's activities begin."
+  },
+  {
+    time: "10:00 AM - 12:00 PM",
+    location: "Room of Requirement",
+    icon: Sparkles,
+    title: "Innovation Challenge: Final Pitch",
+    description: "Teams present their solutions to the retreat challenge. Judges provide feedback and select winners."
+  },
+  {
+    time: "12:30 PM - 2:00 PM",
+    location: "Great Hall",
+    icon: Utensils,
+    title: "Farewell Lunch",
+    description: "Last meal together before departure. Reflect on connections made and knowledge gained during the retreat."
+  },
+  {
+    time: "2:30 PM - 3:30 PM",
+    location: "Great Hall",
+    icon: Award,
+    title: "Closing Ceremony & Awards",
+    description: "Celebration of achievements with awards for challenge winners and special recognitions. Final words from organizers."
+  },
+  {
+    time: "3:30 PM - 4:30 PM",
+    location: "Courtyard",
+    icon: PartyPopper,
+    title: "Farewell Tea & Departure",
+    description: "Final networking opportunity with contact exchanges before heading back to the muggle world, inspired and ready to innovate."
+  }
+];
 
 // Add these animations to your globals.css
 const customStyleTag = document.createElement('style');

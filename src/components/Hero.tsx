@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Sparkles, Wand2, Stars, Feather } from "lucide-react";
 
 const Hero = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
   return (
-    <section className="relative overflow-hidden">
+    <section ref={heroRef} className="relative overflow-hidden">
       {/* Main background image for hero section */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -33,30 +35,25 @@ const Hero = () => {
       {/* Hero content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col justify-center min-h-screen pt-20">
         <div className="text-center mb-16">
-          <div className="inline-block mb-8 quill-decoration">
-            <span className="text-xs uppercase tracking-wider bg-sky-700/80 text-white px-6 py-2 rounded-full 
-              font-harry-potter border border-sky-300/50 shadow-[0_0_15px_rgba(14,165,233,0.5)]">
-              The Chamber of Entrepreneurship
-            </span>
-          </div>
           
-          <h1 className="font-harry-potter text-6xl md:text-8xl font-bold mb-8 leading-tight text-white magical-text-shadow">
+          
+          <h1 data-gsap-anim="fade-up" data-gsap-delay="0.4" className="font-harry-potter text-6xl md:text-8xl font-bold mb-8 leading-tight text-white magical-text-shadow">
             <span className="text-sky-400">Unplug</span><br />
             Hogwarts Edition
           </h1>
           
-          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white/90 font-serif">
+          <p data-gsap-anim="fade-up" data-gsap-delay="0.6" className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white/90 font-serif">
             Where <span className="italic text-sky-300">muggle technology</span> meets <span className="italic text-sky-300">magical innovation</span> in our enchanted mountain sanctuary
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <Button className="font-harry-potter bg-gradient-to-r from-sky-700 to-sky-500 text-white text-lg px-8 py-6 h-auto shadow-[0_0_15px_rgba(14,165,233,0.4)] hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] transition-all" size="lg">
+          <div data-gsap-stagger="0.15" data-gsap-anim="fade-up" className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
+            <Button data-gsap-stagger-item className="font-harry-potter bg-gradient-to-r from-sky-700 to-sky-500 text-white text-lg px-8 py-6 h-auto shadow-[0_0_15px_rgba(14,165,233,0.4)] hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] transition-all" size="lg">
               <Wand2 className="mr-2 h-5 w-5" />
               Cast Your Application
             </Button>
-            <Button variant="outline" size="lg" className="font-harry-potter bg-black/30 backdrop-blur-sm border-sky-400/50 text-sky-400 hover:bg-sky-500/20 text-lg px-8 py-6 h-auto transition-all">
+            <Button data-gsap-stagger-item variant="outline" size="lg" className="font-harry-potter bg-black/30 backdrop-blur-sm border-sky-400/50 text-sky-400 hover:bg-sky-500/20 text-lg px-8 py-6 h-auto transition-all">
               <Stars className="mr-2 h-5 w-5" />
-              View Magical Schedule
+              <a href="#schedule">View Magical Schedule</a>
             </Button>
           </div>
         </div>
@@ -79,13 +76,13 @@ const Hero = () => {
         <div className="container mx-auto px-4 pt-24 pb-20 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white">
+              <h2 data-gsap-anim="fade-right" data-gsap-delay="0.2" className="text-5xl md:text-7xl font-bold mb-8 text-white">
                 <span className="font-harry-potter">About <span className="text-sky-400">Unplug</span></span>
               </h2>
               
-              <div className="h-1 w-24 bg-gradient-to-r from-sky-500 to-sky-300 mb-10"></div>
+              <div data-gsap-anim="fade-right" data-gsap-delay="0.3" className="h-1 w-24 bg-gradient-to-r from-sky-500 to-sky-300 mb-10"></div>
               
-              <div className="space-y-6 text-white/90 text-lg">
+              <div data-gsap-anim="fade-right" data-gsap-delay="0.4" className="space-y-6 text-white/90 text-lg">
                 <p>
                   Unplug: Hogwarts Edition is your chance to escape the mundane and immerse yourself in magical innovation. 
                   Organized by the Google Developer Student Clubs at Fr. Conceicao Rodrigues College of Engineering, 
@@ -100,7 +97,7 @@ const Hero = () => {
                 </p>
               </div>
               
-              <div className="mt-10">
+              <div data-gsap-anim="fade-up" data-gsap-delay="0.5" className="mt-10">
                 <button className="bg-gradient-to-r from-sky-700 to-sky-500 hover:from-sky-600 hover:to-sky-400 
                   text-white font-bold py-3 px-8 rounded-full transition-all shadow-[0_0_15px_rgba(14,165,233,0.4)] 
                   hover:shadow-[0_0_25px_rgba(14,165,233,0.6)]">
@@ -109,7 +106,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="relative">
+            <div data-gsap-anim="fade-left" data-gsap-delay="0.4" className="relative">
               <div className="absolute -left-4 -top-4 w-24 h-24 bg-sky-500/20 rounded-full"></div>
               <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-sky-500/10 rounded-full"></div>
               
