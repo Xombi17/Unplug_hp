@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Main background image for hero section */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/hogwarts-legacy-3840x2160-10410.jpg" 
+          src="/images/harry2.jpg" 
           alt="Hogwarts" 
           className="w-full h-full object-cover"
         />
@@ -65,11 +65,10 @@ const Hero = () => {
       {/* Houses section with a different background */}
       <div className="relative bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-lg">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img 
-            src="/images/4K-Mountains-Night-Starry-Sky-Wallpaper-3840x2160.jpg" 
-            alt="Night Sky" 
-            className="w-full h-full object-cover"
-          />
+          <div 
+            className="w-full h-full bg-gradient-to-b from-indigo-900 via-purple-900 to-black opacity-80"
+            style={{ backgroundImage: "radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 40%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%)" }}
+          ></div>
         </div>
         
         <div className="container mx-auto px-4 py-20 relative z-10">

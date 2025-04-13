@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,8 +8,8 @@ const Spellbook = () => {
     <section id="spellbook" className="py-16 md:py-24 bg-hogwarts-stone/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 font-magical px-4 py-1">Resources</Badge>
-          <h2 className="font-magical text-3xl md:text-5xl font-bold mb-6">The Startup Spellbook</h2>
+          <Badge variant="outline" className="mb-4 font-harryPotter px-4 py-1">Resources</Badge>
+          <h2 className="font-harryPotter text-3xl md:text-5xl font-bold mb-6">The Startup Spellbook</h2>
           <p className="max-w-2xl mx-auto text-lg">
             Every wizard needs their spellbook. Here are the magical resources we provide to help your startup succeed.
           </p>
@@ -22,7 +21,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-gryffindor-primary flex items-center justify-center mb-4">
                 <Wand className="w-6 h-6 text-white" />
               </div>
-              <CardTitle className="font-magical text-2xl">Incubation Magic</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Incubation Magic</CardTitle>
               <CardDescription>Transform your idea into reality</CardDescription>
             </CardHeader>
             <CardContent>
@@ -37,7 +36,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-slytherin-primary flex items-center justify-center mb-4">
                 <Coins className="w-6 h-6 text-white" />
               </div>
-              <CardTitle className="font-magical text-2xl">Funding Potions</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Funding Potions</CardTitle>
               <CardDescription>Access capital to grow</CardDescription>
             </CardHeader>
             <CardContent>
@@ -52,7 +51,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-ravenclaw-primary flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <CardTitle className="font-magical text-2xl">Technical Charms</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Technical Charms</CardTitle>
               <CardDescription>Build your product</CardDescription>
             </CardHeader>
             <CardContent>
@@ -67,7 +66,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-hufflepuff-primary flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-black" />
               </div>
-              <CardTitle className="font-magical text-2xl">Network Enchantment</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Network Enchantment</CardTitle>
               <CardDescription>Connect with the right people</CardDescription>
             </CardHeader>
             <CardContent>
@@ -82,7 +81,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-gryffindor-secondary flex items-center justify-center mb-4">
                 <BookOpen className="w-6 h-6 text-gryffindor-primary" />
               </div>
-              <CardTitle className="font-magical text-2xl">Knowledge Scrolls</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Knowledge Scrolls</CardTitle>
               <CardDescription>Learn what you need to succeed</CardDescription>
             </CardHeader>
             <CardContent>
@@ -97,7 +96,7 @@ const Spellbook = () => {
               <div className="w-12 h-12 rounded-full bg-slytherin-secondary flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-slytherin-primary" />
               </div>
-              <CardTitle className="font-magical text-2xl">Growth Elixirs</CardTitle>
+              <CardTitle className="font-harryPotter text-2xl">Growth Elixirs</CardTitle>
               <CardDescription>Scale your business</CardDescription>
             </CardHeader>
             <CardContent>

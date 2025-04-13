@@ -2,8 +2,8 @@
 
 /* Harry Potter Font - assuming it's installed locally on the user's system */
 @font-face {
-  font-family: 'Harry Potter';
-  src: local('Harry Potter');
+  font-family: 'HarryPotter';
+  src: url('/fonts/font-harry-potter.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -181,5 +181,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .font-harry-potter {
+    font-family: 'HarryPotter', fantasy, serif;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Facebook, Instagram, Twitter, Sparkles } from "lucide-react";
+import { BookOpen, Facebook, Instagram, Twitter, Sparkles, GraduationCap } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <Sparkles className="w-6 h-6 text-amber-400 mr-2" />
-              <span className="font-magical text-2xl font-bold text-white">Hogwarts<span className="text-amber-400">Launch</span></span>
+              <span className="font-harryPotter text-2xl font-bold text-white">Hogwarts<span className="text-amber-400">Launch</span></span>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
               The premier startup launchpad for magical entrepreneurs. We transform groundbreaking ideas into successful ventures in our enchanted mountain setting.
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-magical text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="font-harryPotter text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-white/70 hover:text-amber-400 transition-colors">About Us</a></li>
               <li><a href="#features" className="text-white/70 hover:text-amber-400 transition-colors">Services</a></li>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-magical text-lg font-semibold mb-4 text-white">Resources</h3>
+            <h3 className="font-harryPotter text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-3">
               <li><a href="#" className="text-white/70 hover:text-amber-400 transition-colors">FAQ</a></li>
               <li><a href="#" className="text-white/70 hover:text-amber-400 transition-colors">Blog</a></li>

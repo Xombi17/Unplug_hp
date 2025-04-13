@@ -86,9 +86,13 @@ export default {
 				},
 			},
 			fontFamily: {
+				sans: ['poppins', 'sans-serif'],
+				serif: ['Georgia', 'serif'],
+				pompins: ['poppins', 'sans-serif'],
+				harryPotter: ['HarryPotter', 'sans-serif'],
 				'magical': ['Playfair Display', 'serif'],
 				'spellbook': ['Georgia', 'serif'],
-				'harry-potter': ['Harry Potter', 'fantasy', 'serif'],
+				'harry-potter': ['HarryPotter', 'fantasy', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
