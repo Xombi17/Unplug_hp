@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -89,6 +88,7 @@ export default {
 			fontFamily: {
 				'magical': ['Playfair Display', 'serif'],
 				'spellbook': ['Georgia', 'serif'],
+				'harry-potter': ['Harry Potter', 'fantasy', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -118,6 +118,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
+			},
+			boxShadow: {
+				'glow': '0 0 15px rgba(245, 158, 11, 0.5)',
 			}
 		}
 	},
