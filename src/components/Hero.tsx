@@ -1,9 +1,15 @@
 import React, { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Sparkles, Wand2, Stars, Feather } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  
+  const handleApplyClick = () => {
+    navigate('/apply');
+  };
   
   return (
     <section ref={heroRef} className="relative overflow-hidden">
@@ -47,7 +53,12 @@ const Hero = () => {
           </p>
           
           <div data-gsap-stagger="0.15" data-gsap-anim="fade-up" className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <Button data-gsap-stagger-item className="font-harry-potter bg-gradient-to-r from-sky-700 to-sky-500 text-white text-lg px-8 py-6 h-auto shadow-[0_0_15px_rgba(14,165,233,0.4)] hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] transition-all" size="lg">
+            <Button 
+              data-gsap-stagger-item 
+              className="font-harry-potter bg-gradient-to-r from-sky-700 to-sky-500 text-white text-lg px-8 py-6 h-auto shadow-[0_0_15px_rgba(14,165,233,0.4)] hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] transition-all" 
+              size="lg"
+              onClick={handleApplyClick}
+            >
               <Wand2 className="mr-2 h-5 w-5" />
               Cast Your Application
             </Button>

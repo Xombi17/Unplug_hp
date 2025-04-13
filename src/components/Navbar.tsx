@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAnimations } from '@/hooks/useAnimations';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,9 +100,13 @@ const Navbar = () => {
           
           {/* Apply button on the right */}
           <div className="flex justify-end">
-            <Button className={`magical-button bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg px-6 py-2 h-auto ${getNavAnimation(7)}`}>
-              Apply Now
-            </Button>
+            <Link to="/apply">
+              <Button 
+                className={`magical-button bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg px-6 py-2 h-auto ${getNavAnimation(7)}`}
+              >
+                Apply Now
+              </Button>
+            </Link>
           </div>
         </div>
         
@@ -148,9 +153,13 @@ const Navbar = () => {
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </a>
           ))}
-          <Button className="magical-button w-full bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg">
-            Apply Now
-          </Button>
+          <Link to="/apply" onClick={toggleMenu}>
+            <Button 
+              className="magical-button w-full bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg"
+            >
+              Apply Now
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
