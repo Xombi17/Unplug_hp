@@ -60,9 +60,14 @@ const Footer = () => {
         <div className="border-t border-sky-400/20 my-8"></div>
         
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white/60">
-            © 2025 Unplug . All rights reserved. No muggles allowed. 
+          <p className="text-sm text-white/60 flex items-center flex-wrap">
+            © 2025 Unplug . All rights reserved. No muggles allowed.
           </p>
+          <div className="flex items-center justify-center my-2">
+            <Sparkles className="h-5 w-5 text-sky-400 mx-1" />
+            <span className="text-sky-400 font-harry-potter text-lg">Made by Varad Joshi</span>
+            <Sparkles className="h-5 w-5 text-sky-400 mx-1" />
+          </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-white/60 hover:text-sky-400 transition-colors">Privacy Policy</a>
             <a href="#" className="text-sm text-white/60 hover:text-sky-400 transition-colors">Terms of Service</a>
