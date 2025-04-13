@@ -30,22 +30,23 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white">
-              About <span className="text-amber-400">Unplug</span>
+              <span className="font-harry-potter">About <span className="text-amber-400">Unplug</span></span>
             </h1>
             
             <div className="h-1 w-24 bg-gradient-to-r from-amber-500 to-amber-300 mb-10"></div>
             
             <div className="space-y-6 text-white/90 text-lg">
               <p>
-                Unplug: By The Beach is your chance to break the routine and dive into something real. 
+                Unplug: Hogwarts Edition is your chance to escape the mundane and immerse yourself in magical innovation. 
                 Organized by the Google Developer Student Clubs at Fr. Conceicao Rodrigues College of Engineering, 
-                this three-day, two-night retreat in Alibaug focuses on connecting, learning, and building your future 
-                — no fluff, just results.
+                this three-day, two-night retreat in our enchanted mountain sanctuary focuses on spellbinding connections, 
+                mystical learning, and crafting your future — no illusions, just pure wizardry.
               </p>
               
               <p>
-                If you're ready to unplug and dive into an experience that can kickstart your journey, 
-                this is the event you can't miss. Join us at the beach and see where your ideas lead.
+                If you're ready to unplug and embark on a journey that can transform your path to greatness, 
+                this is the enchantment you can't miss. Join us in the mountains where the stars align with your ambitions 
+                and see where your magical ideas lead.
               </p>
             </div>
             
@@ -65,7 +66,7 @@ const About = () => {
             <div className="p-1 rounded-lg bg-gradient-to-br from-amber-600/50 via-amber-500/30 to-amber-600/50 shadow-[0_0_15px_rgba(245,158,11,0.5)] relative z-10">
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/images/harry2.jpg" 
+                  src="/images/harry1.jpg" 
                   alt="Unplug Hogwarts" 
                   className="w-full h-auto object-cover"
                 />

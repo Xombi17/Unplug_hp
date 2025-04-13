@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Sparkles, Wand2, Stars, Feather, BookOpen, GraduationCap } from "lucide-react";
+import { Sparkles, Wand2, Stars, Feather } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -61,75 +61,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
-      {/* Houses section with a different background */}
-      <div className="relative bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-lg">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div 
-            className="w-full h-full bg-gradient-to-b from-indigo-900 via-purple-900 to-black opacity-80"
-            style={{ backgroundImage: "radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 40%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%)" }}
-          ></div>
-        </div>
-        
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-block mb-2">
-              <GraduationCap className="h-12 w-12 mx-auto text-amber-400 mb-2" />
-            </div>
-            <h2 className="font-harry-potter text-3xl text-white mb-4 magical-text-shadow">The Four Pillars of Magical Entrepreneurship</h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-12">Discover which Hogwarts house traits will drive your startup to success</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Gryffindor */}
-            <div className="group cursor-pointer">
-              <div className="flex flex-col items-center px-6 py-10 rounded-lg bg-gradient-to-b from-red-900/40 to-yellow-800/40 border-2 border-yellow-600/30 backdrop-blur-sm hover:bg-gradient-to-b hover:from-red-900/60 hover:to-yellow-800/60 transition-all duration-300 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-r from-red-700 to-yellow-600 mb-6 shadow-glow group-hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] transition-all duration-300">
-                  <Sparkles className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="font-harry-potter text-2xl text-white mb-3">Gryffindor</h3>
-                <p className="text-white/80 text-center">Courage and leadership for bold entrepreneurial ventures</p>
-              </div>
-            </div>
-            
-            {/* Hufflepuff */}
-            <div className="group cursor-pointer">
-              <div className="flex flex-col items-center px-6 py-10 rounded-lg bg-gradient-to-b from-yellow-800/40 to-black/40 border-2 border-yellow-600/30 backdrop-blur-sm hover:bg-gradient-to-b hover:from-yellow-800/60 hover:to-black/60 transition-all duration-300 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-600 to-black mb-6 shadow-glow group-hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] transition-all duration-300">
-                  <Sparkles className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="font-harry-potter text-2xl text-white mb-3">Hufflepuff</h3>
-                <p className="text-white/80 text-center">Dedication and teamwork for sustainable business growth</p>
-              </div>
-            </div>
-            
-            {/* Ravenclaw */}
-            <div className="group cursor-pointer">
-              <div className="flex flex-col items-center px-6 py-10 rounded-lg bg-gradient-to-b from-blue-900/40 to-gray-800/40 border-2 border-blue-600/30 backdrop-blur-sm hover:bg-gradient-to-b hover:from-blue-900/60 hover:to-gray-800/60 transition-all duration-300 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-700 to-gray-600 mb-6 shadow-glow group-hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] transition-all duration-300">
-                  <BookOpen className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="font-harry-potter text-2xl text-white mb-3">Ravenclaw</h3>
-                <p className="text-white/80 text-center">Innovation and wisdom for breakthrough ideas and strategies</p>
-              </div>
-            </div>
-            
-            {/* Slytherin */}
-            <div className="group cursor-pointer">
-              <div className="flex flex-col items-center px-6 py-10 rounded-lg bg-gradient-to-b from-green-900/40 to-gray-800/40 border-2 border-green-600/30 backdrop-blur-sm hover:bg-gradient-to-b hover:from-green-900/60 hover:to-gray-800/60 transition-all duration-300 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-r from-green-700 to-gray-600 mb-6 shadow-glow group-hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] transition-all duration-300">
-                  <Sparkles className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="font-harry-potter text-2xl text-white mb-3">Slytherin</h3>
-                <p className="text-white/80 text-center">Ambition and cunning strategy for market domination</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Decorative bottom fade */}
-      <div className="relative h-24 bg-gradient-to-b from-black/70 to-transparent"></div>
     </section>
   );
 };
