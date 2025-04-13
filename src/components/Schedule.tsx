@@ -34,10 +34,10 @@ const Schedule = () => {
           <div className="flex justify-center">
             <CalendarDays className="h-14 w-14 text-sky-400 mx-auto mb-4" />
           </div>
-          <Badge variant="outline" className="mb-4 font-harry-potter px-6 py-2 bg-sky-900/40 text-sky-100 border-sky-400/40 shadow-glow">
+          <Badge variant="outline" className="mb-4 font-harry-potter px-6 py-2 bg-sky-900/40 text-sky-100 border-sky-400/40 shadow-[0_0_15px_rgba(14,165,233,0.3)]">
             Magical Timetable
           </Badge>
-          <h2 className="font-harry-potter text-4xl md:text-6xl font-bold mb-6 text-sky-300 magical-text-shadow">
+          <h2 className="font-harry-potter text-4xl md:text-6xl font-bold mb-6 text-sky-300 shadow-[0_0_15px_rgba(14,165,233,0.3)]">
             Event Schedule
           </h2>
           <p className="text-sky-100 text-lg md:text-xl max-w-3xl mx-auto mb-8">
@@ -46,7 +46,7 @@ const Schedule = () => {
         </div>
         
         {/* Event details card */}
-        <div className="max-w-4xl mx-auto mb-12 bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-6 shadow-[0_0_25px_rgba(14,165,233,0.2)]">
+        <div className="max-w-5xl mx-auto mb-12 bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-6 shadow-[0_0_25px_rgba(14,165,233,0.2)]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center">
               <div className="bg-sky-900/50 rounded-full p-3 mr-4">
@@ -71,9 +71,9 @@ const Schedule = () => {
         </div>
         
         {/* Day selector tabs */}
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex bg-black/60 backdrop-blur-md rounded-full p-1 border border-sky-700/50 shadow-glow">
+        <div className="max-w-5xl mx-auto mb-10">
+          <div className="flex justify-center">
+            <div className="inline-flex bg-black/60 backdrop-blur-md rounded-full p-1 border border-sky-700/50 shadow-[0_0_15px_rgba(14,165,233,0.15)]">
               {[1, 2, 3].map((day) => (
                 <button 
                   key={day}
@@ -89,430 +89,186 @@ const Schedule = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Schedule content */}
+        <div className="max-w-5xl mx-auto">
+          {/* Day header */}
+          <div className="bg-gradient-to-r from-sky-900/80 via-sky-800/80 to-sky-900/80 rounded-t-xl px-6 py-4 border border-sky-700/50">
+            <h3 className="font-harry-potter text-2xl text-sky-300 flex items-center">
+              {activeDay === 1 && (
+                <>
+                  <Sparkles className="w-6 h-6 mr-3 text-sky-400" />
+                  Day One: The Awakening
+                </>
+              )}
+              {activeDay === 2 && (
+                <>
+                  <Stars className="w-6 h-6 mr-3 text-sky-400" />
+                  Day Two: The Transformation
+                </>
+              )}
+              {activeDay === 3 && (
+                <>
+                  <Scroll className="w-6 h-6 mr-3 text-sky-400" />
+                  Day Three: The Ascension
+                </>
+              )}
+            </h3>
+          </div>
           
-          {/* Schedule content container */}
-          <div className="bg-black/40 backdrop-blur-md rounded-xl border border-sky-700/30 overflow-hidden shadow-[0_0_25px_rgba(14,165,233,0.15)]">
-            {/* Day header */}
-            <div className="bg-gradient-to-r from-sky-900/80 via-sky-800/80 to-sky-900/80 px-6 py-4 border-b border-sky-700/50">
-              <h3 className="font-harry-potter text-2xl text-sky-300 flex items-center">
-                {activeDay === 1 && (
-                  <>
-                    <Sparkles className="w-6 h-6 mr-3 text-sky-400" />
-                    Day One: The Awakening
-                  </>
-                )}
-                {activeDay === 2 && (
-                  <>
-                    <Stars className="w-6 h-6 mr-3 text-sky-400" />
-                    Day Two: The Transformation
-                  </>
-                )}
-                {activeDay === 3 && (
-                  <>
-                    <Scroll className="w-6 h-6 mr-3 text-sky-400" />
-                    Day Three: The Ascension
-                  </>
-                )}
-              </h3>
-            </div>
-            
+          {/* Day content */}
+          <div className="bg-black/40 backdrop-blur-md rounded-b-xl border-x border-b border-sky-700/30 overflow-hidden shadow-[0_0_25px_rgba(14,165,233,0.15)]">
             {/* Day One Content */}
             {activeDay === 1 && (
-              <div className="p-6 divide-y divide-sky-800/30">
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">4:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <CalendarDays className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Arrival and Check-in</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Welcome to our Magical Beachside Sanctuary. Collect your welcome kit and settle into your accommodations.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="grid gap-6 p-6 md:grid-cols-2">
+                <EventCard 
+                  time="4:00 PM"
+                  title="Arrival and Check-in"
+                  description="Welcome to our Magical Beachside Sanctuary. Collect your welcome kit and settle into your accommodations."
+                  icon={<CalendarDays className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">5:00-6:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Welcome Drink + Snacks</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Enjoy magical refreshments and meet your fellow wizards and witches in an informal setting.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="5:00-6:30 PM"
+                  title="Welcome Drink + Snacks"
+                  description="Enjoy magical refreshments and meet your fellow wizards and witches in an informal setting."
+                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">7:00-8:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Sparkles className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Unplug Kickoff</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Opening ceremony and introduction to the magical entrepreneurship weekend ahead.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="7:00-8:00 PM"
+                  title="Unplug Kickoff"
+                  description="Opening ceremony and introduction to the magical entrepreneurship weekend ahead."
+                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">8:30-9:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Utensils className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Dinner & BBQ</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Feast on a delicious dinner with magical cuisine and beachside barbecue.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="8:30-9:30 PM"
+                  title="Dinner & BBQ"
+                  description="Feast on a delicious dinner with magical cuisine and beachside barbecue."
+                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">9:30-11:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Scroll className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Ice-breaker & Pitch by Campfire</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Connect with fellow entrepreneurs around the magical campfire and share your startup ideas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="9:30-11:00 PM"
+                  title="Ice-breaker & Pitch by Campfire"
+                  description="Connect with fellow entrepreneurs around the magical campfire and share your startup ideas."
+                  icon={<Scroll className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">11:00 PM+</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Moon className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Build or Sleep</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Continue developing your ideas with newfound collaborators or retire to your magical chambers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="11:00 PM+"
+                  title="Build or Sleep"
+                  description="Continue developing your ideas with newfound collaborators or retire to your magical chambers."
+                  icon={<Moon className="w-5 h-5 text-sky-400" />}
+                />
               </div>
             )}
             
             {/* Day Two Content */}
             {activeDay === 2 && (
-              <div className="p-6 divide-y divide-sky-800/30">
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">7:30-8:30 AM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Breakfast</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Start your day with a hearty magical breakfast to fuel your creativity.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="grid gap-6 p-6 md:grid-cols-2">
+                <EventCard 
+                  time="7:30-8:30 AM"
+                  title="Breakfast"
+                  description="Start your day with a hearty magical breakfast to fuel your creativity."
+                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">9:00-10:30 AM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <GraduationCap className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Workshop: Spellbinding Pitches</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Learn the art of crafting compelling startup pitches that captivate investors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="9:00-10:30 AM"
+                  title="Workshop: Spellbinding Pitches"
+                  description="Learn the art of crafting compelling startup pitches that captivate investors."
+                  icon={<GraduationCap className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">11:00-12:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <BookOpen className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Expert Panel: Magical Innovation</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Industry leaders share insights on disruptive innovation and market opportunities.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="11:00-12:30 PM"
+                  title="Expert Panel: Magical Innovation"
+                  description="Industry leaders share insights on disruptive innovation and market opportunities."
+                  icon={<BookOpen className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">1:00-2:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Utensils className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Lunch Break</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Networking lunch with fellow entrepreneurs and mentors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="1:00-2:00 PM"
+                  title="Lunch Break"
+                  description="Networking lunch with fellow entrepreneurs and mentors."
+                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">2:30-5:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Stars className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Mentor Matching & Working Session</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        One-on-one sessions with industry experts matched to your specific startup needs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="2:30-5:30 PM"
+                  title="Mentor Matching & Working Session"
+                  description="One-on-one sessions with industry experts matched to your specific startup needs."
+                  icon={<Stars className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">6:00-7:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Music className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Sunset Networking</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Mountain trails exploration and networking with light refreshments.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="6:00-7:30 PM"
+                  title="Sunset Networking"
+                  description="Mountain trails exploration and networking with light refreshments."
+                  icon={<Music className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">8:00-9:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Utensils className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Magical Banquet</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        An evening of celebration, featuring special entertainment and networking opportunities.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="8:00-9:30 PM"
+                  title="Magical Banquet"
+                  description="An evening of celebration, featuring special entertainment and networking opportunities."
+                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
+                />
               </div>
             )}
             
             {/* Day Three Content */}
             {activeDay === 3 && (
-              <div className="p-6 divide-y divide-sky-800/30">
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">7:30-8:30 AM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Final Breakfast</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Energize for your final day with a nutritious breakfast.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="grid gap-6 p-6 md:grid-cols-2">
+                <EventCard 
+                  time="7:30-8:30 AM"
+                  title="Final Breakfast"
+                  description="Energize for your final day with a nutritious breakfast."
+                  icon={<Coffee className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">9:00-10:00 AM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Scroll className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Pitch Preparation</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Final polishing of your startup pitches with mentor guidance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="9:00-10:00 AM"
+                  title="Pitch Preparation"
+                  description="Final polishing of your startup pitches with mentor guidance."
+                  icon={<Scroll className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">10:30-12:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Sparkles className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Startup Showcase</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Present your refined business ideas to a panel of investors and industry experts.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="10:30-12:30 PM"
+                  title="Startup Showcase"
+                  description="Present your refined business ideas to a panel of investors and industry experts."
+                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">1:00-2:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Utensils className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Celebratory Lunch</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Final networking lunch with entrepreneurs, mentors and investors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="1:00-2:00 PM"
+                  title="Celebratory Lunch"
+                  description="Final networking lunch with entrepreneurs, mentors and investors."
+                  icon={<Utensils className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">2:30-3:30 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <GraduationCap className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Awards & Closing Ceremony</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Recognition of outstanding projects, startup funding announcements, and closing remarks.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="2:30-3:30 PM"
+                  title="Awards & Closing Ceremony"
+                  description="Recognition of outstanding projects, startup funding announcements, and closing remarks."
+                  icon={<GraduationCap className="w-5 h-5 text-sky-400" />}
+                />
                 
-                <div className="py-5 first:pt-0 last:pb-0">
-                  <div className="flex items-start">
-                    <div className="min-w-[140px] flex items-center mb-3 md:mb-0">
-                      <Clock className="text-sky-500 w-5 h-5 mr-2" />
-                      <span className="text-sky-300 font-harry-potter">4:00 PM</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center">
-                        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <Sparkles className="w-5 h-5 text-sky-400" />
-                        </div>
-                        <h4 className="font-harry-potter text-xl text-sky-300">Departure</h4>
-                      </div>
-                      <p className="text-sky-100/90 mt-2 pl-[52px]">
-                        Farewell to our magical retreat. Transportation arrangements back to the city.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <EventCard 
+                  time="4:00 PM"
+                  title="Departure"
+                  description="Farewell to our magical retreat. Transportation arrangements back to the city."
+                  icon={<Sparkles className="w-5 h-5 text-sky-400" />}
+                />
               </div>
             )}
           </div>
           
-          {/* Magical decorative footer */}
+          {/* Magical signature */}
           <div className="relative h-12 mt-6 flex justify-center">
             <div className="absolute w-40 h-1 bg-gradient-to-r from-transparent via-sky-600/50 to-transparent"></div>
             <div className="absolute -top-6 text-sky-400/30 font-harry-potter text-sm">
@@ -742,6 +498,29 @@ const Schedule = () => {
   );
 };
 
+// EventCard component
+const EventCard = ({ time, title, description, icon }) => {
+  return (
+    <div className="bg-sky-900/20 backdrop-blur-md border border-sky-700/30 rounded-lg p-4 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(14,165,233,0.2)] hover:border-sky-400/50">
+      <div className="flex items-center mb-3">
+        <div className="flex items-center mr-4">
+          <Clock className="text-sky-500 w-5 h-5 mr-2" />
+          <span className="text-sky-300 font-harry-potter">{time}</span>
+        </div>
+      </div>
+      <div className="flex items-center mb-2">
+        <div className="w-10 h-10 bg-sky-900/50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+          {icon}
+        </div>
+        <h4 className="font-harry-potter text-xl text-sky-300">{title}</h4>
+      </div>
+      <p className="text-sky-100/90 pl-[52px]">
+        {description}
+      </p>
+    </div>
+  );
+};
+
 // Add these animations to your globals.css
 const customStyleTag = document.createElement('style');
 customStyleTag.textContent = `
@@ -751,9 +530,20 @@ customStyleTag.textContent = `
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+.magical-text-shadow {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
 }
 `;
-document.head.appendChild(customStyleTag);
+
+if (typeof document !== 'undefined') {
+  document.head.appendChild(customStyleTag);
+}
 
 export default Schedule;
