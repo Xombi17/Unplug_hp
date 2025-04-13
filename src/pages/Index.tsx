@@ -4,12 +4,17 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Mentors from '@/components/Mentors';
 import Schedule from '@/components/Schedule';
-import Newsletter from '@/components/Newsletter';
+import SuccessStories from '@/components/SuccessStories';
+import FAQ from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 import { initGSAPAnimations } from '@/lib/gsap-animations';
 
 const Index = () => {
   useEffect(() => {
+    // Reset scroll position on page load/refresh
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    
     // Initialize GSAP animations
     initGSAPAnimations();
     
@@ -43,7 +48,8 @@ const Index = () => {
       <Features />
       <Mentors />
       <Schedule />
-      <Newsletter />
+      <SuccessStories />
+      <FAQ />
       <Footer />
     </div>
   );

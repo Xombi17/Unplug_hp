@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Clock, Stars, BookOpen, GraduationCap, Scroll, ScrollText, Feather, CalendarDays, Coffee, Utensils, Music, Moon, MapPin, Mountain, Coins, Wand2, Hotel, Check, ChevronRight, Smile, Calendar, Users, Heart, Award, ChefHat, PartyPopper } from "lucide-react";
 
 const Schedule = () => {
   const [activeDay, setActiveDay] = useState(1);
+
+  useEffect(() => {
+    // Any existing useEffect logic
+  }, [activeDay]);
 
   return (
     <>
@@ -167,7 +171,7 @@ const Schedule = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div data-gsap-anim="fade-up" className="text-center mb-16">
           <div className="flex justify-center">
             <Coins className="h-14 w-14 text-sky-400 mx-auto mb-4" />
           </div>
@@ -184,7 +188,7 @@ const Schedule = () => {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Early Bird Price Card */}
-          <div className="bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-8 shadow-[0_0_25px_rgba(14,165,233,0.2)] transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(14,165,233,0.3)]">
+          <div data-gsap-anim="fade-right" className="bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-8 shadow-[0_0_25px_rgba(14,165,233,0.2)] transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(14,165,233,0.3)]">
             <div className="absolute -top-3 -right-3">
               <Badge className="bg-sky-500 hover:bg-sky-600 px-4 py-1 text-black font-semibold">Limited Offer</Badge>
             </div>
@@ -223,7 +227,7 @@ const Schedule = () => {
           </div>
           
           {/* Regular Price Card */}
-          <div className="bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-8 shadow-[0_0_25px_rgba(14,165,233,0.2)] transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(14,165,233,0.3)]">
+          <div data-gsap-anim="fade-left" className="bg-black/60 backdrop-blur-md rounded-xl border border-sky-700/50 p-8 shadow-[0_0_25px_rgba(14,165,233,0.2)] transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(14,165,233,0.3)]">
             <h3 className="font-harry-potter text-3xl text-sky-300 mb-2">Regular Admission</h3>
             <div className="flex items-end mb-6">
               <span className="text-4xl text-sky-100 font-bold">₹3,500</span>
@@ -260,7 +264,7 @@ const Schedule = () => {
         </div>
         
         {/* What's Included Section */}
-        <div className="max-w-4xl mx-auto mt-16 bg-black/40 backdrop-blur-md rounded-xl border border-sky-700/30 overflow-hidden shadow-[0_0_25px_rgba(14,165,233,0.15)]">
+        <div data-gsap-anim="fade-up" data-gsap-delay="0.3" className="max-w-4xl mx-auto mt-16 bg-black/40 backdrop-blur-md rounded-xl border border-sky-700/30 overflow-hidden shadow-[0_0_25px_rgba(14,165,233,0.15)]">
           <div className="bg-gradient-to-r from-sky-900/80 via-sky-800/80 to-sky-900/80 px-6 py-4 border-b border-sky-700/50">
             <h3 className="font-harry-potter text-2xl text-sky-300 flex items-center">
               <Sparkles className="w-6 h-6 mr-3 text-sky-400" />
@@ -270,8 +274,8 @@ const Schedule = () => {
           
           <div className="p-6 md:p-8">
             <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div className="flex items-start mb-5">
+              <div data-gsap-stagger="0.1">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <Hotel className="w-5 h-5 text-sky-400" />
                   </div>
@@ -283,7 +287,7 @@ const Schedule = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-5">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <Utensils className="w-5 h-5 text-sky-400" />
                   </div>
@@ -295,7 +299,7 @@ const Schedule = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-5">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <GraduationCap className="w-5 h-5 text-sky-400" />
                   </div>
@@ -308,8 +312,8 @@ const Schedule = () => {
                 </div>
               </div>
               
-              <div>
-                <div className="flex items-start mb-5">
+              <div data-gsap-stagger="0.1" data-gsap-delay="0.3">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <Mountain className="w-5 h-5 text-sky-400" />
                   </div>
@@ -321,7 +325,7 @@ const Schedule = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-5">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <Music className="w-5 h-5 text-sky-400" />
                   </div>
@@ -333,7 +337,7 @@ const Schedule = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-5">
+                <div data-gsap-stagger-item className="flex items-start mb-5">
                   <div className="bg-sky-900/50 rounded-full p-2 mr-4 mt-1">
                     <Scroll className="w-5 h-5 text-sky-400" />
                   </div>
@@ -347,7 +351,7 @@ const Schedule = () => {
               </div>
             </div>
             
-            <div className="text-center mt-8">
+            <div data-gsap-anim="fade-up" data-gsap-delay="0.6" className="text-center mt-8">
               <p className="text-sky-200 italic mb-6">
                 * Transportation to and from Mahabaleshwar is not included in the ticket price
               </p>

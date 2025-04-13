@@ -147,7 +147,7 @@ const faqData = [
   },
   {
     question: "What is the cost to attend?",
-    answer: "The full three-day retreat, including accommodations, meals, workshops, and materials, costs 599 Galleons (or the muggle equivalent). Limited scholarships are available for exceptional candidates demonstrating financial need. Early owl registration discounts may apply.",
+    answer: "The full three-day retreat, including accommodations, meals, workshops, and materials, costs 3000 Galleons (or the muggle equivalent). Limited scholarships are available for exceptional candidates demonstrating financial need. Early owl registration discounts may apply.",
     icon: <CreditCard className="h-6 w-6 text-sky-400" />
   }
 ];

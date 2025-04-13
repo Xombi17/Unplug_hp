@@ -21,6 +21,21 @@ const Navbar = () => {
   };
   
   useEffect(() => {
+    // Clear hash on initial load to always start at top
+    if (window.location.hash) {
+      // We need to add this timeout to ensure the browser doesn't immediately try to navigate
+      // to the hash after we've cleared it
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        // Replace the current URL with one without the hash
+        const cleanUrl = window.location.pathname + window.location.search;
+        window.history.replaceState(null, document.title, cleanUrl);
+      }, 0);
+    }
+  }, []);
+  
+  useEffect(() => {
+    // Handle scrolling behavior
     const handleScroll = () => {
       const currentScrollTop = window.scrollY;
       
@@ -53,44 +68,67 @@ const Navbar = () => {
       isScrolled ? "backdrop-blur-md bg-black/30 border-b border-sky-400/20" : "bg-transparent",
       isVisible ? "translate-y-0" : "-translate-y-full"
     )}>
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className={`flex items-center ${getNavAnimation(0)}`}>
-          <a href="/" className="flex items-center">
-            <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
-         
-          </a>
-        </div>
-        
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center justify-between flex-1">
-          <div className="flex-grow-0"></div> {/* Empty space */}
-          <div className="flex space-x-8 items-center mx-auto">
-            {['about', 'features', 'mentors', 'schedule', 'newsletter'].map((item, index) => (
-              <a 
-                key={item}
-                href={`#${item}`} 
-                className={`font-magical text-white hover:text-sky-400 transition-colors ${getNavAnimation(index + 1)}`}
-              >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </a>
-            ))}
+      <div className="container mx-auto px-4 py-4">
+        {/* Desktop Navigation */}
+        <div className="hidden md:grid grid-cols-3 items-center">
+          {/* Logo on the left */}
+          <div className={`flex items-center ${getNavAnimation(0)}`}>
+            <a href="/" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.history.pushState(null, '', '/');
+            }} className="flex items-center">
+              <img src="/images/gdsc.png" alt="GDSC Logo" className="h-10 w-auto mr-2" />
+            </a>
           </div>
-          <Button className={`magical-button bg-gradient-to-r from-sky-600 to-sky-400 text-white ${getNavAnimation(6)}`}>
-            Apply Now
-          </Button>
+          
+          {/* Navigation links in the center */}
+          <div className="flex justify-center">
+            <div className="flex space-x-10 items-center">
+              {['about', 'features', 'mentors', 'schedule', 'stories', 'faq'].map((item, index) => (
+                <a 
+                  key={item}
+                  href={`#${item}`} 
+                  className={`font-harry-potter text-xl text-white hover:text-sky-400 transition-colors ${getNavAnimation(index + 1)}`}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          {/* Apply button on the right */}
+          <div className="flex justify-end">
+            <Button className={`magical-button bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg px-6 py-2 h-auto ${getNavAnimation(7)}`}>
+              Apply Now
+            </Button>
+          </div>
         </div>
         
-        {/* Mobile Menu Button */}
-        <div className={`md:hidden ${getNavAnimation(1)}`}>
-          <Button 
-            variant="ghost" 
-            size="icon"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-            className="text-white"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+        {/* Mobile Navigation */}
+        <div className="flex md:hidden items-center justify-between">
+          <div className={`flex items-center ${getNavAnimation(0)}`}>
+            <a href="/" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.history.pushState(null, '', '/');
+            }} className="flex items-center">
+              <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
+            </a>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <div className={`${getNavAnimation(1)}`}>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              className="text-white"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
       </div>
       
@@ -100,17 +138,17 @@ const Navbar = () => {
         isMenuOpen ? "max-h-96 py-4" : "max-h-0 py-0"
       )}>
         <div className="container mx-auto px-4 flex flex-col space-y-4">
-          {['about', 'features', 'mentors', 'schedule', 'newsletter'].map((item, index) => (
+          {['about', 'features', 'mentors', 'schedule', 'stories', 'faq'].map((item, index) => (
             <a 
               key={item}
               href={`#${item}`} 
-              className={`font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors`}
+              className={`font-harry-potter text-lg p-2 text-white hover:bg-white/10 rounded-md transition-colors`}
               onClick={toggleMenu}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </a>
           ))}
-          <Button className="magical-button w-full bg-gradient-to-r from-sky-600 to-sky-400 text-white">
+          <Button className="magical-button w-full bg-gradient-to-r from-sky-600 to-sky-400 text-white text-lg">
             Apply Now
           </Button>
         </div>

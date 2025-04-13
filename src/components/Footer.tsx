@@ -30,22 +30,23 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-harryPotter text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="font-harry-potter text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-white/70 hover:text-sky-400 transition-colors">About Us</a></li>
               <li><a href="#features" className="text-white/70 hover:text-sky-400 transition-colors">Services</a></li>
               <li><a href="#mentors" className="text-white/70 hover:text-sky-400 transition-colors">Mentors</a></li>
-              <li><a href="#events" className="text-white/70 hover:text-sky-400 transition-colors">Events</a></li>
-              <li><a href="#newsletter" className="text-white/70 hover:text-sky-400 transition-colors">Contact</a></li>
+              <li><a href="#schedule" className="text-white/70 hover:text-sky-400 transition-colors">Schedule</a></li>
+              <li><a href="#stories" className="text-white/70 hover:text-sky-400 transition-colors">Success Stories</a></li>
+              <li><a href="#faq" className="text-white/70 hover:text-sky-400 transition-colors">FAQ</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-harryPotter text-lg font-semibold mb-4 text-white">Resources</h3>
+            <h3 className="font-harry-potter text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/70 hover:text-sky-400 transition-colors">FAQ</a></li>
+              <li><a href="#faq" className="text-white/70 hover:text-sky-400 transition-colors">FAQ</a></li>
               <li><a href="#" className="text-white/70 hover:text-sky-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-white/70 hover:text-sky-400 transition-colors">Success Stories</a></li>
+              <li><a href="#stories" className="text-white/70 hover:text-sky-400 transition-colors">Success Stories</a></li>
               <li><a href="#" className="text-white/70 hover:text-sky-400 transition-colors">Investor Relations</a></li>
               <li>
                 <a href="#" className="flex items-center text-white/70 hover:text-sky-400 transition-colors">
