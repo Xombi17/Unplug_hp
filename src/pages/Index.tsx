@@ -10,17 +10,15 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed overflow-x-hidden" style={{ backgroundImage: 'url("/images/beautiful-snowy-mountains-road-fo-3840x2160.jpg")' }}>
-      <div className="backdrop-blur-sm backdrop-brightness-50 min-h-screen">
-        <Navbar />
-        <Hero />
-        <About />
-        <Features />
-        <Mentors />
-        <Events />
-        <Newsletter />
-        <Footer />
-      </div>
+    <div className="min-h-screen overflow-x-hidden bg-black">
+      <Navbar />
+      <Hero />
+      <About />
+      <Features />
+      <Mentors />
+      <Events />
+      <Newsletter />
+      <Footer />
     </div>
   );
 };
