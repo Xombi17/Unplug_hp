@@ -14,9 +14,9 @@ const Mentors = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/hogwarts-great-hall.jpg" 
+          src="/images/mountains.jpg" 
           alt="Hogwarts Great Hall" 
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black/80"></div>
       </div>
@@ -111,19 +111,19 @@ const mentors = [
     name: "Harry Potter",
     role: "Innovation Specialist",
     description: "Renowned for defeating dark challenges, Harry brings his problem-solving expertise to help startups overcome obstacles.",
-    image: "/images/hogwarts-harry-3840x2160-13694.jpg"
+    image: "/images/harry3.jpg"
   },
   {
     name: "Hermione Granger",
     role: "Strategic Planning Expert",
     description: "With her exceptional analytical skills, Hermione helps founders develop robust business strategies and execution plans.",
-    image: "/images/hogwarts-legacy-3840x2160-10410.jpg"
+    image: "/images/hermo.jpg"
   },
   {
     name: "Ron Weasley",
     role: "Networking Specialist",
     description: "With deep connections in the wizarding world, Ron helps startups build networks and form valuable partnerships.",
-    image: "/images/WallpaperDog-657235.jpg"
+    image: "/images/ronald.jpg"
   }
 ];
 
