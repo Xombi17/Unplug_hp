@@ -8,8 +8,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <Sparkles className="w-6 h-6 text-amber-400 mr-2" />
-              <span className="font-harryPotter text-2xl font-bold text-white">Hogwarts<span className="text-amber-400">Launch</span></span>
+              <div className="flex items-center">
+                <img src="/images/gdsc.png" alt="GDSC Logo" className="h-8 w-auto mr-2" />
+                <span className="font-harry-potter text-2xl font-bold text-white">GDSC <span className="text-amber-400">CRCE</span></span>
+              </div>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
               The premier startup launchpad for magical entrepreneurs. We transform groundbreaking ideas into successful ventures in our enchanted mountain setting.
@@ -59,7 +61,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white/60">
-            © 2025 Unplug Startup Launchpad. All rights reserved. No muggles allowed.
+            © 2025 Unplug . All rights reserved. No muggles allowed. 
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-white/60 hover:text-amber-400 transition-colors">Privacy Policy</a>

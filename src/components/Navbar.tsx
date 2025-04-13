@@ -39,7 +39,7 @@ const Navbar = () => {
           <a href="#about" className="font-magical text-white hover:text-amber-400 transition-colors">About</a>
           <a href="#features" className="font-magical text-white hover:text-amber-400 transition-colors">Services</a>
           <a href="#mentors" className="font-magical text-white hover:text-amber-400 transition-colors">Mentors</a>
-          <a href="#events" className="font-magical text-white hover:text-amber-400 transition-colors">Events</a>
+          <a href="#schedule" className="font-magical text-white hover:text-amber-400 transition-colors">Schedule</a>
           <a href="#newsletter" className="font-magical text-white hover:text-amber-400 transition-colors">Contact</a>
           <Button className="magical-button bg-gradient-to-r from-amber-600 to-amber-400 text-white">
             Apply Now
@@ -69,7 +69,7 @@ const Navbar = () => {
           <a href="#about" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>About</a>
           <a href="#features" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>Services</a>
           <a href="#mentors" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>Mentors</a>
-          <a href="#events" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>Events</a>
+          <a href="#schedule" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>Schedule</a>
           <a href="#newsletter" className="font-magical p-2 text-white hover:bg-white/10 rounded-md transition-colors" onClick={toggleMenu}>Contact</a>
           <Button className="magical-button w-full bg-gradient-to-r from-amber-600 to-amber-400 text-white">
             Apply Now
