@@ -7,7 +7,7 @@ const SuccessStories = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/hogwarts-great-hall.jpg" 
+          src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=2069&auto=format&fit=crop"
           alt="Hogwarts Great Hall" 
           className="w-full h-full object-cover opacity-20"
         />
@@ -116,7 +116,7 @@ const successStories = [
   {
     name: "Neville Longbottom",
     company: "Magical Botanicals Inc.",
-    image: "/images/hogwarts-harry-3840x2160-13694.jpg",
+    image: "/images/neville.jpg",
     testimonial: "Before Unplug: Hogwarts Edition, I was just a nervous wizard with a passion for herbology. The mentors helped me transform my unique plant knowledge into a thriving business that now supplies magical ingredients to apothecaries worldwide.",
     metrics: {
       achievement: "200+ Clients",
@@ -126,7 +126,7 @@ const successStories = [
   {
     name: "Luna Lovegood",
     company: "Spectrespecs",
-    image: "/images/hogwarts-legacy-3840x2160-10410.jpg",
+    image: "/images/luna.jpeg",
     testimonial: "The connections I made at Unplug were invaluable. I came with a strange idea for magical eyewear that could see hidden creatures. Now Spectrespecs are sold in every magical shop from Diagon Alley to Tokyo!",
     metrics: {
       achievement: "Patent Holder",
@@ -136,7 +136,7 @@ const successStories = [
   {
     name: "Draco Malfoy",
     company: "Nimbus Innovations",
-    image: "/images/hogwarts-harry-3840x2160-13694.jpg",
+    image: "/images/draco.jpg",
     testimonial: "I was skeptical at first, but the workshops on magical product development revolutionized my approach. Our racing brooms now incorporate technology no one thought possible, outperforming even the Firebolt.",
     metrics: {
       achievement: "Market Leader",
@@ -146,7 +146,7 @@ const successStories = [
   {
     name: "Cho Chang",
     company: "Divination Dynamics",
-    image: "/images/WallpaperDog-657235.jpg",
+    image: "/images/cho.jpg",
     testimonial: "The mentor matching at Unplug connected me with experts who understood my vision for modernizing divination practices. We've now developed crystal ball technology that integrates with magical smartphones!",
     metrics: {
       achievement: "10 Patents",
