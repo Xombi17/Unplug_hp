@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
 import Features from '@/components/Features';
 import Mentors from '@/components/Mentors';
 import Events from '@/components/Events';
@@ -13,7 +12,6 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden bg-black">
       <Navbar />
       <Hero />
-      <About />
       <Features />
       <Mentors />
       <Events />
