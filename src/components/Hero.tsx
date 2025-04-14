@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button } from "@/components/ui/button";
-import { Sparkles, Wand2, Stars, Feather } from "lucide-react";
+import { Sparkles, Wand2, Stars } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -21,17 +21,6 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/40"></div>
-      </div>
-      
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-10 flying-key z-10">
-        <Feather className="h-10 w-10 text-sky-300" style={{ transform: "rotate(30deg)" }} />
-      </div>
-      <div className="absolute bottom-1/3 right-10 flying-key z-10" style={{ animationDelay: "2s" }}>
-        <Feather className="h-8 w-8 text-sky-300" style={{ transform: "rotate(-20deg)" }} />
-      </div>
-      <div className="absolute top-1/2 right-1/4 flying-key z-10" style={{ animationDelay: "3s" }}>
-        <Feather className="h-6 w-6 text-sky-300" style={{ transform: "rotate(15deg)" }} />
       </div>
       
       {/* Magical lighting effects */}
